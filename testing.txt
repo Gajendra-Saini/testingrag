@@ -1,0 +1,19 @@
+Testing Strategy
+
+The application uses three levels of testing.
+
+Unit tests verify individual functions and classes in isolation.
+
+Integration tests verify communication between application components.
+
+End-to-end tests verify complete user workflows.
+
+Authentication tests verify successful login, invalid credentials, expired tokens, and invalid JWT tokens.
+
+Payment tests verify successful payments, temporary provider failures, retry behavior, and permanent failures.
+
+Database integration tests verify that repositories correctly create, read, and update database records.
+
+End-to-end tests verify complete workflows such as user login followed by an authenticated payment request.
+
+Tests should use isolated test data so that one test does not affect another test.

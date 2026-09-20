@@ -1,0 +1,21 @@
+Deployment Architecture
+
+The application is packaged into Docker containers.
+
+The API service runs inside a Docker container.
+
+The database runs as a separate PostgreSQL container.
+
+The application container communicates with PostgreSQL through the internal Docker network.
+
+Environment variables are used to provide database credentials and application configuration.
+
+Production logs are collected by the centralized logging system.
+
+Application health checks are exposed through the health endpoint.
+
+The deployment system automatically restarts the application container if the process crashes.
+
+Monitoring collects application logs, CPU usage, memory usage, and request latency.
+
+Deployment artifacts are built from the main branch.

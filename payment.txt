@@ -1,0 +1,23 @@
+Payment Service
+
+The payment service processes customer payments after authentication and authorization succeed.
+
+The payment endpoint receives payment details from the API layer.
+
+The payment service validates the payment amount and payment method.
+
+A payment record is created in the database before the external payment provider is called.
+
+The payment service sends the payment request to the external payment provider.
+
+If the provider confirms the payment, the payment status is updated to SUCCESS.
+
+If the provider returns a temporary network error, the payment service retries the request.
+
+The system allows a maximum of three retry attempts.
+
+The delay between retry attempts increases after every failure.
+
+If all retry attempts fail, the payment status is changed to FAILED.
+
+Permanent payment failures are returned to the API caller.

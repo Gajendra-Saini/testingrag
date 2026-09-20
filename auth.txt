@@ -1,0 +1,23 @@
+Authentication Service
+
+The authentication service is responsible for verifying user identity.
+
+A user submits a username and password to the login endpoint.
+
+The authentication service validates the credentials against the users database.
+
+If the credentials are valid, the service generates a JWT access token.
+
+The JWT token is returned to the client.
+
+For subsequent API requests, the client sends the JWT token in the Authorization header.
+
+Authentication middleware extracts the token from the request header.
+
+The middleware calls the token validation function.
+
+If the token is valid, the request continues to the authorization layer.
+
+If the token is expired or invalid, the server returns a 401 authentication error.
+
+Password values are never stored directly. Passwords are stored using a secure password hash.

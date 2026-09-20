@@ -1,0 +1,23 @@
+Database Layer
+
+The database layer manages persistent application data.
+
+The application uses PostgreSQL as its primary relational database.
+
+User information is stored in the users table.
+
+Payment information is stored in the payments table.
+
+Authentication sessions are stored in the authentication_sessions table.
+
+The repository layer communicates with PostgreSQL through the database client.
+
+Application services should not directly execute SQL queries.
+
+Instead, services call repository methods.
+
+The user repository provides methods for finding users and creating users.
+
+The payment repository provides methods for creating payments and updating payment status.
+
+Database transactions are used when multiple related operations must succeed or fail together.
