@@ -21,3 +21,5 @@ The delay between retry attempts increases after every failure.
 If all retry attempts fail, the payment status is changed to FAILED.
 
 Permanent payment failures are returned to the API caller.
+
+The payment service also records the transaction timestamp after a successful payment.
