@@ -1,0 +1,7 @@
+New Feature
+
+This file was added after the initial repository indexing.
+
+The new feature introduces notification support.
+
+Notifications are sent after successful payment processing.
